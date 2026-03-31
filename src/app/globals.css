@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Enable class-based dark mode (not media query) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* Ontario Design System Colors */
   --color-ontario-dark: #1e1e1e;

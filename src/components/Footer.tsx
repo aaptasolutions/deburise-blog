@@ -21,7 +21,7 @@ export default function Footer() {
         <h2 className="text-[32px] font-semibold text-ontario-dark dark:text-gray-100 mb-3">
           Subscribe to our Newsletter
         </h2>
-        <p className="text-ontario-body dark:text-gray-400 mb-8">
+        <p className="text-ontario-body dark:text-gray-300 mb-8">
           We&apos;ll send you a nice letter once per week. No spam.
         </p>
         <form className="flex gap-3 max-w-[480px] mx-auto">
@@ -53,7 +53,7 @@ export default function Footer() {
                 className="h-[36px] w-auto dark:brightness-0 dark:invert"
               />
             </Link>
-            <p className="mt-4 text-[15px] text-ontario-body dark:text-gray-400 leading-relaxed">
+            <p className="mt-4 text-[15px] text-ontario-body dark:text-gray-300 leading-relaxed">
               Welcome to the Deburise Blog – your space for fresh ideas, insightful stories, and practical knowledge.
             </p>
             <div className="flex gap-3 mt-6">
@@ -61,7 +61,7 @@ export default function Footer() {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-9 h-9 rounded-full bg-white dark:bg-[#1a1a2e] border border-ontario-border dark:border-[#2a2a3e] flex items-center justify-center text-ontario-body dark:text-gray-400 hover:text-ontario-accent hover:border-ontario-accent transition-colors"
+                  className="w-9 h-9 rounded-full bg-white dark:bg-[#1a1a2e] border border-ontario-border dark:border-[#2a2a3e] flex items-center justify-center text-ontario-body dark:text-gray-300 hover:text-ontario-accent hover:border-ontario-accent transition-colors"
                   aria-label={social.name}
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -82,7 +82,7 @@ export default function Footer() {
                 <Link
                   key={cat}
                   href={`/category/${cat.toLowerCase()}`}
-                  className="text-[15px] text-ontario-body dark:text-gray-400 hover:text-ontario-accent transition-colors py-1"
+                  className="text-[15px] text-ontario-body dark:text-gray-300 hover:text-ontario-accent transition-colors py-1"
                 >
                   {cat}
                 </Link>
@@ -95,12 +95,12 @@ export default function Footer() {
             <h3 className="text-[11px] font-semibold text-ontario-dark dark:text-gray-100 uppercase tracking-widest mb-5">
               How to Find Us
             </h3>
-            <div className="space-y-3 text-[15px] text-ontario-body dark:text-gray-400">
+            <div className="space-y-3 text-[15px] text-ontario-body dark:text-gray-300">
               <p>27 Division St, New York, NY 10002, United States</p>
-              <a href="mailto:hello@mysite.com" className="block hover:text-ontario-accent">
+              <a href="mailto:hello@mysite.com" className="block dark:text-gray-300 hover:text-ontario-accent">
                 hello@mysite.com
               </a>
-              <a href="tel:88002345234" className="block hover:text-ontario-accent">
+              <a href="tel:88002345234" className="block dark:text-gray-300 hover:text-ontario-accent">
                 8 800 2345 234
               </a>
             </div>
@@ -110,7 +110,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="border-t border-ontario-border dark:border-[#2a2a3e]">
-        <div className="max-w-[1300px] mx-auto px-6 py-5 text-center text-[13px] text-ontario-meta dark:text-gray-500">
+        <div className="max-w-[1300px] mx-auto px-6 py-5 text-center text-[13px] text-ontario-meta dark:text-gray-400">
           &copy; {new Date().getFullYear()} &mdash; Deburise. All Rights Reserved.
         </div>
       </div>
