@@ -8,7 +8,7 @@ export default function Sidebar({ data }: { data: SidebarData }) {
       <div className="sticky-sidebar space-y-10">
         {/* About Widget */}
         <div className="text-center">
-          <h3 className="text-[11px] font-semibold text-ontario-dark uppercase tracking-widest mb-6">
+          <h3 className="text-[11px] font-semibold text-ontario-dark dark:text-gray-100 uppercase tracking-widest mb-6">
             About
           </h3>
           <div className="w-[100px] h-[100px] rounded-full overflow-hidden mx-auto mb-4">
@@ -24,7 +24,7 @@ export default function Sidebar({ data }: { data: SidebarData }) {
             {data.author.name}
           </h4>
           <p className="text-[13px] text-ontario-meta mt-1">{data.author.role}</p>
-          <p className="text-[14px] text-ontario-body mt-3 leading-relaxed">
+          <p className="text-[14px] text-ontario-body dark:text-gray-400 mt-3 leading-relaxed">
             {data.author.bio}
           </p>
           <div className="flex justify-center gap-3 mt-4">
@@ -45,7 +45,7 @@ export default function Sidebar({ data }: { data: SidebarData }) {
 
         {/* Featured Posts */}
         <div>
-          <h3 className="text-[11px] font-semibold text-ontario-dark uppercase tracking-widest mb-6">
+          <h3 className="text-[11px] font-semibold text-ontario-dark dark:text-gray-100 uppercase tracking-widest mb-6">
             Featured Posts
           </h3>
           <div className="space-y-5">
@@ -63,7 +63,7 @@ export default function Sidebar({ data }: { data: SidebarData }) {
                 <div className="flex-1 min-w-0">
                   <Link
                     href={`/post/${post.slug}`}
-                    className="text-[14px] font-semibold text-ontario-dark leading-snug hover:text-ontario-accent transition-colors line-clamp-2"
+                    className="text-[14px] font-semibold text-ontario-dark dark:text-gray-200 leading-snug hover:text-ontario-accent transition-colors line-clamp-2"
                   >
                     {post.title}
                   </Link>
@@ -81,7 +81,7 @@ export default function Sidebar({ data }: { data: SidebarData }) {
 
         {/* Categories */}
         <div>
-          <h3 className="text-[11px] font-semibold text-ontario-dark uppercase tracking-widest mb-6">
+          <h3 className="text-[11px] font-semibold text-ontario-dark dark:text-gray-100 uppercase tracking-widest mb-6">
             Categories
           </h3>
           <div className="flex flex-wrap gap-2">
@@ -99,7 +99,7 @@ export default function Sidebar({ data }: { data: SidebarData }) {
 
         {/* Related Articles */}
         <div>
-          <h3 className="text-[11px] font-semibold text-ontario-dark uppercase tracking-widest mb-6">
+          <h3 className="text-[11px] font-semibold text-ontario-dark dark:text-gray-100 uppercase tracking-widest mb-6">
             Related Articles
           </h3>
           <div className="space-y-4">
@@ -116,7 +116,7 @@ export default function Sidebar({ data }: { data: SidebarData }) {
                 </div>
                 <Link
                   href={`/post/${post.slug}`}
-                  className="text-[15px] font-semibold text-ontario-dark leading-snug hover:text-ontario-accent transition-colors"
+                  className="text-[15px] font-semibold text-ontario-dark dark:text-gray-200 leading-snug hover:text-ontario-accent transition-colors"
                 >
                   {post.title}
                 </Link>
@@ -128,7 +128,7 @@ export default function Sidebar({ data }: { data: SidebarData }) {
 
         {/* Popular Tags */}
         <div>
-          <h3 className="text-[11px] font-semibold text-ontario-dark uppercase tracking-widest mb-6">
+          <h3 className="text-[11px] font-semibold text-ontario-dark dark:text-gray-100 uppercase tracking-widest mb-6">
             Popular Tags
           </h3>
           <div className="flex flex-wrap gap-2">
@@ -136,7 +136,7 @@ export default function Sidebar({ data }: { data: SidebarData }) {
               <Link
                 key={tag.slug}
                 href={`/tag/${tag.slug}`}
-                className="text-[12px] px-3 py-1.5 rounded-full bg-ontario-light-bg border border-ontario-border text-ontario-body hover:text-ontario-accent hover:border-ontario-accent transition-colors"
+                className="text-[12px] px-3 py-1.5 rounded-full bg-ontario-light-bg dark:bg-[#1a1a2e] border border-ontario-border dark:border-[#2a2a3e] text-ontario-body dark:text-gray-400 hover:text-ontario-accent hover:border-ontario-accent transition-colors"
               >
                 {tag.name} ({tag.count})
               </Link>
@@ -152,7 +152,7 @@ function SocialIcon({ href, label, path }: { href: string; label: string; path: 
   return (
     <a
       href={href}
-      className="w-8 h-8 rounded-full border border-ontario-border flex items-center justify-center text-ontario-body hover:text-ontario-accent hover:border-ontario-accent transition-colors"
+      className="w-8 h-8 rounded-full border border-ontario-border flex items-center justify-center text-ontario-body dark:text-gray-400 hover:text-ontario-accent hover:border-ontario-accent transition-colors"
       aria-label={label}
     >
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

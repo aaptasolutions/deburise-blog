@@ -21,8 +21,8 @@ export default function Pagination({ currentPage, totalPages }: PaginationProps)
           href={page === 1 ? "/" : `/page/${page}`}
           className={`w-10 h-10 rounded-full flex items-center justify-center text-[14px] font-medium transition-colors ${
             page === currentPage
-              ? "bg-ontario-dark text-white"
-              : "text-ontario-body hover:bg-ontario-light-bg"
+              ? "bg-ontario-dark dark:bg-ontario-accent text-white"
+              : "text-ontario-body dark:text-gray-400 hover:bg-ontario-light-bg dark:hover:bg-[#1a1a2e]"
           }`}
         >
           {page}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const categories = [
   "Digital", "Business", "Startups", "Trends", "Crypto", "News",
@@ -14,20 +15,20 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-ontario-light-bg">
+    <footer className="bg-ontario-light-bg dark:bg-[#12121e]">
       {/* Newsletter Section */}
       <div className="max-w-[680px] mx-auto px-6 py-16 text-center">
-        <h2 className="text-[32px] font-semibold text-ontario-dark mb-3">
+        <h2 className="text-[32px] font-semibold text-ontario-dark dark:text-gray-100 mb-3">
           Subscribe to our Newsletter
         </h2>
-        <p className="text-ontario-body mb-8">
+        <p className="text-ontario-body dark:text-gray-400 mb-8">
           We&apos;ll send you a nice letter once per week. No spam.
         </p>
         <form className="flex gap-3 max-w-[480px] mx-auto">
           <input
             type="email"
             placeholder="Enter Your Email"
-            className="flex-1 px-5 py-3 rounded-full border border-ontario-border bg-white text-sm focus:outline-none focus:border-ontario-accent"
+            className="flex-1 px-5 py-3 rounded-full border border-ontario-border dark:border-[#2a2a3e] bg-white dark:bg-[#1a1a2e] dark:text-gray-200 text-sm focus:outline-none focus:border-ontario-accent"
           />
           <button
             type="submit"
@@ -39,22 +40,28 @@ export default function Footer() {
       </div>
 
       {/* Main Footer */}
-      <div className="border-t border-ontario-border">
+      <div className="border-t border-ontario-border dark:border-[#2a2a3e]">
         <div className="max-w-[1300px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Logo & Description */}
           <div>
-            <Link href="/" className="text-2xl font-bold text-ontario-dark tracking-tight">
-              ONTARIO
+            <Link href="/" className="inline-block">
+              <Image
+                src="https://cloud-1de12d.becdn.net/media/original/a86bec0ae21006b47523d1bf99292221/deburise-1-.png"
+                alt="Deburise"
+                width={160}
+                height={40}
+                className="h-[36px] w-auto dark:brightness-0 dark:invert"
+              />
             </Link>
-            <p className="mt-4 text-[15px] text-ontario-body leading-relaxed">
-              Welcome to the ONTARIO Blog – your space for fresh ideas, insightful stories, and practical knowledge.
+            <p className="mt-4 text-[15px] text-ontario-body dark:text-gray-400 leading-relaxed">
+              Welcome to the Deburise Blog – your space for fresh ideas, insightful stories, and practical knowledge.
             </p>
             <div className="flex gap-3 mt-6">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-9 h-9 rounded-full bg-white border border-ontario-border flex items-center justify-center text-ontario-body hover:text-ontario-accent hover:border-ontario-accent transition-colors"
+                  className="w-9 h-9 rounded-full bg-white dark:bg-[#1a1a2e] border border-ontario-border dark:border-[#2a2a3e] flex items-center justify-center text-ontario-body dark:text-gray-400 hover:text-ontario-accent hover:border-ontario-accent transition-colors"
                   aria-label={social.name}
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -67,7 +74,7 @@ export default function Footer() {
 
           {/* Categories */}
           <div>
-            <h3 className="text-[11px] font-semibold text-ontario-dark uppercase tracking-widest mb-5">
+            <h3 className="text-[11px] font-semibold text-ontario-dark dark:text-gray-100 uppercase tracking-widest mb-5">
               Categories
             </h3>
             <div className="grid grid-cols-2 gap-2">
@@ -75,7 +82,7 @@ export default function Footer() {
                 <Link
                   key={cat}
                   href={`/category/${cat.toLowerCase()}`}
-                  className="text-[15px] text-ontario-body hover:text-ontario-accent transition-colors py-1"
+                  className="text-[15px] text-ontario-body dark:text-gray-400 hover:text-ontario-accent transition-colors py-1"
                 >
                   {cat}
                 </Link>
@@ -85,10 +92,10 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-[11px] font-semibold text-ontario-dark uppercase tracking-widest mb-5">
+            <h3 className="text-[11px] font-semibold text-ontario-dark dark:text-gray-100 uppercase tracking-widest mb-5">
               How to Find Us
             </h3>
-            <div className="space-y-3 text-[15px] text-ontario-body">
+            <div className="space-y-3 text-[15px] text-ontario-body dark:text-gray-400">
               <p>27 Division St, New York, NY 10002, United States</p>
               <a href="mailto:hello@mysite.com" className="block hover:text-ontario-accent">
                 hello@mysite.com
@@ -102,9 +109,9 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-ontario-border">
-        <div className="max-w-[1300px] mx-auto px-6 py-5 text-center text-[13px] text-ontario-meta">
-          &copy; {new Date().getFullYear()} &mdash; ONTARIO. All Rights Reserved.
+      <div className="border-t border-ontario-border dark:border-[#2a2a3e]">
+        <div className="max-w-[1300px] mx-auto px-6 py-5 text-center text-[13px] text-ontario-meta dark:text-gray-500">
+          &copy; {new Date().getFullYear()} &mdash; Deburise. All Rights Reserved.
         </div>
       </div>
 

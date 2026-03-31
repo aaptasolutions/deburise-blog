@@ -47,7 +47,7 @@ export default function PostCard({ post }: { post: Post }) {
       </Link>
 
       {/* Excerpt */}
-      <p className="text-[14px] text-ontario-body leading-relaxed mb-2 line-clamp-2">
+      <p className="text-[14px] text-ontario-body dark:text-gray-400 leading-relaxed mb-2 line-clamp-2">
         {post.excerpt}
       </p>
 
@@ -55,14 +55,14 @@ export default function PostCard({ post }: { post: Post }) {
       <h2 className="mb-3">
         <Link
           href={`/post/${post.slug}`}
-          className="text-[22px] font-semibold text-ontario-dark leading-snug hover:text-ontario-accent transition-colors line-clamp-2"
+          className="text-[22px] font-semibold text-ontario-dark dark:text-gray-100 leading-snug hover:text-ontario-accent transition-colors line-clamp-2"
         >
           {post.title}
         </Link>
       </h2>
 
       {/* Meta */}
-      <div className="flex items-center gap-2 text-[13px] text-ontario-meta">
+      <div className="flex items-center gap-2 text-[13px] text-ontario-meta dark:text-gray-500">
         <Link href="#" className="text-ontario-accent hover:underline font-medium">
           {post.author.name}
         </Link>
