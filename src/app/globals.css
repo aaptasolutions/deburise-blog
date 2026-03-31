@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+@theme {
+  /* Ontario Design System Colors */
+  --color-ontario-dark: #1e1e1e;
+  --color-ontario-body: #565656;
+  --color-ontario-light-bg: #f5f7fa;
+  --color-ontario-accent: #da3a3a;
+  --color-ontario-accent-hover: #c02e2e;
+  --color-ontario-border: #e8e8e8;
+  --color-ontario-meta: #999999;
+  --color-ontario-white: #ffffff;
+
+  /* Category Pill Colors */
+  --color-cat-ai: #f9eeff;
+  --color-cat-ai-border: #ede2f2;
+  --color-cat-business: #fff4e6;
+  --color-cat-business-border: #f2e4d2;
+  --color-cat-crypto: #e6f7ff;
+  --color-cat-crypto-border: #d2e8f2;
+  --color-cat-digital: #fff0f0;
+  --color-cat-digital-border: #f2d2d2;
+  --color-cat-news: #f0fff0;
+  --color-cat-news-border: #d2f2d2;
+  --color-cat-startups: #fff8e6;
+  --color-cat-startups-border: #f2ecd2;
+  --color-cat-technology: #f0f0ff;
+  --color-cat-technology-border: #d8d8f2;
+  --color-cat-trends: #fff0fa;
+  --color-cat-trends-border: #f2d2e8;
+  --color-cat-recent: #f0faf0;
+  --color-cat-recent-border: #d2e8d2;
+
+  /* Typography */
+  --font-sans: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  /* Spacing */
+  --radius-card: 20px;
+  --radius-pill: 16px;
+  --radius-badge: 13px;
+  --radius-button: 30px;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--color-ontario-body);
+  background-color: var(--color-ontario-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-ontario-dark);
+  font-weight: 600;
+}
+
+a {
+  color: var(--color-ontario-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-ontario-accent-hover);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ontario-light-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* Article content styles */
+.article-content p {
+  margin-bottom: 1.5em;
+  line-height: 1.8;
+}
+
+.article-content h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  color: var(--color-ontario-dark);
+}
+
+.article-content h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--color-ontario-dark);
+}
+
+.article-content ul, .article-content ol {
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+}
+
+.article-content li {
+  margin-bottom: 0.5em;
+  line-height: 1.7;
+}
+
+.article-content blockquote {
+  background: var(--color-ontario-light-bg);
+  padding: 56px 64px 56px 80px;
+  margin: 2em 0;
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--color-ontario-dark);
+  border-radius: 12px;
+  position: relative;
+  font-weight: 500;
+}
+
+.article-content blockquote::before {
+  content: "\201C";
+  position: absolute;
+  left: 24px;
+  top: 30px;
+  font-size: 72px;
+  color: var(--color-ontario-accent);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.article-content img {
+  border-radius: 20px;
+  width: 100%;
+  margin: 2em 0;
+}
+
+.article-content a {
+  color: var(--color-ontario-accent);
+  text-decoration: underline;
+}
+
+/* Category badge colors */
+.cat-pill-ai { background: var(--color-cat-ai); border-color: var(--color-cat-ai-border); }
+.cat-pill-business { background: var(--color-cat-business); border-color: var(--color-cat-business-border); }
+.cat-pill-crypto { background: var(--color-cat-crypto); border-color: var(--color-cat-crypto-border); }
+.cat-pill-digital { background: var(--color-cat-digital); border-color: var(--color-cat-digital-border); }
+.cat-pill-news { background: var(--color-cat-news); border-color: var(--color-cat-news-border); }
+.cat-pill-startups { background: var(--color-cat-startups); border-color: var(--color-cat-startups-border); }
+.cat-pill-technology { background: var(--color-cat-technology); border-color: var(--color-cat-technology-border); }
+.cat-pill-trends { background: var(--color-cat-trends); border-color: var(--color-cat-trends-border); }
+.cat-pill-recent { background: var(--color-cat-recent); border-color: var(--color-cat-recent-border); }
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Sticky sidebar */
+.sticky-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+/* Share bar sticky */
+.sticky-share {
+  position: sticky;
+  top: 120px;
+}
